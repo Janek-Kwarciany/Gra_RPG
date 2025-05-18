@@ -8,5 +8,5 @@ class Mag(Postac):
         sila_ataku = random.randint(7, 18)
         super().__init__(nazwa, zdrowie, sila_ataku)
 
-    def atakuj(self):
-        return super().atakuj()
+    def atakuj(self, przeciwnik):
+        super().atakuj(przeciwnik)

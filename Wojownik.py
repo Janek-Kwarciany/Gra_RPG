@@ -8,5 +8,5 @@ class Wojownik(Postac):
         sila_ataku = random.randint(10, 20)
         super().__init__(nazwa, zdrowie, sila_ataku)
 
-    def atakuj(self):
-        return super().atakuj()
+    def atakuj(self, przeciwnik):
+        super().atakuj(przeciwnik)

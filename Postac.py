@@ -7,5 +7,6 @@ class Postac(ABC):
         self.sila_ataku = sila_ataku
         
     @abstractmethod
-    def atakuj(self):
-        pass
+    def atakuj(self, przeciwnik):
+        przeciwnik.zdrowie = przeciwnik.zdrowie - self.sila_ataku
+    
