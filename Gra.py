@@ -24,20 +24,25 @@ class Gra:
             self.walka(postac, wrog)
 
     def walka(self, postac, wrog):
+        poczatek_walki = time.time()
         while 1:
+            print('\u2694') 
             postac.atakuj(wrog)
             print(f"ilość zdrowia wroga {wrog.zdrowie}")
             if wrog.zdrowie <= 0:
                 print("przegrana wroga")
                 break
 
+            print('\u2694') 
             wrog.atakuj(postac)
             print(f"ilość zdrowia postaci {postac.zdrowie}")
             if postac.zdrowie <= 0:
-                print("przegrana posraci")
+                print("przegrana postaci")
                 break
 
             time.sleep(0.5)
+        koniec_walki = time.time()
+        print(f"czas walki {koniec_walki - poczatek_walki}")
 
     def losuj_wroga(self):
         postacie = {
