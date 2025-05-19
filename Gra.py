@@ -25,6 +25,8 @@ class Gra:
 
     def walka(self, postac, wrog):
         poczatek_walki = time.time()
+
+        postac.wyposazenie()
         while 1:
             print('\u2694') 
             postac.atakuj(wrog)
@@ -52,6 +54,7 @@ class Gra:
         wylosowane = random.randint(1, 2)
         # print(f"wylosowany przeciwnik: {postacie[wylosowane].__name__}")
 
+        #wrog = Mag("Wróg")
         wrog = postacie[wylosowane]("Wróg")
         print(f"wylosowany przeciwnik: {wrog.__class__.__name__}")
 
